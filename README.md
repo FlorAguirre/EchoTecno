@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Descripcion del proyecto EchoTecno:
+
+El e-commerce es sobre venta de productos tecnologicos.
+
+En la pagina principal figuran los productos que se venden, y en el navegador las diferentes categorías.
+
+Si se quiere saber mas del producto en cuestion, se deberá hacer click en "Ver Detalle".
+
+A su vez, en las categorias que figuran en el navegador es un filtro, si se selecciona una de esas categorías solo aparecerán los productos de las mismas.
+
