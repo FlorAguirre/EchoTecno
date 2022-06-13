@@ -12,7 +12,7 @@ const productos = [{
         name: 'Audifonos Beats',
         price: 20000,
         category: 'Audifonos',
-        img: '/imagenes/61Xvn9KUgYL._AC_SX522_.jpg',
+        img: '/imagenes/Audifonos-removebg-preview.png',
         stock: 20,
         description: 'Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones - Apple W1 Headphone Chip, Class 1 Bluetooth, 22 Hours of Listening Time, Built-in Microphone - Defiant Black-Red (Latest Model)'
     },
@@ -32,7 +32,7 @@ export const getProductos = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(productos)
-        }, 2000)
+        }, 500)
     })
 }
 
@@ -40,7 +40,7 @@ export const getProductosByCategory = (categoryId) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(productos.filter(prod => prod.category === categoryId))
-        }, 2000)
+        }, 500)
     })
 }
 
@@ -49,6 +49,6 @@ export const getProductosById = (id) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(productos.find(prod => prod.id === id))
-        }, 2000)
+        }, 500)
     })
 }
