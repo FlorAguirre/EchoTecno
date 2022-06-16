@@ -4,22 +4,32 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter , Routes, Route } from 'react-router-dom'
+import React, {
+  useState,
+  createContext
+} from 'react'
+import {CartProvider} from './context/CartContext'
+
+
+
 
 function App() {
+
   return (
     <div className="App">
-     
+   <CartProvider>
    {/*    <ItemListContainer greeting ='EchoTecno'/> */}
     {/*   <ItemDetailContainer /> */}
-      <BrowserRouter>
+      <BrowserRouter >
       <NavBar />
         <Routes>
           <Route path='/' element={<ItemListContainer greeting ='EchoTecno'/>}/>
           <Route path='/category/:categoryId' element={<ItemListContainer greeting ='EchoTecno'/>}/>
-          <Route path='/detail/:productoId' element ={<ItemDetailContainer/>}/>
-          
+          <Route path='/detail/:productoId' element ={<ItemDetailContainer />}/>
+          <Route path='/cart' element ={<h1>CART</h1>} />
         </Routes>
       </BrowserRouter>
+      </CartProvider>
      {/*  <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

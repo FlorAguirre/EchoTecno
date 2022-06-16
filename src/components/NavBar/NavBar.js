@@ -2,9 +2,15 @@ import logo from '../../assets/img/Echotecno-removebg-preview.png'
 import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
 import { Link, NavLink } from 'react-router-dom'
+import { useEffect } from 'react'
+
 
 const NavBar = () => {
-    return (
+
+    
+    return ( 
+
+   
         <header className="header">    
         <nav>  
             <div className="header__componentes"> 
@@ -21,7 +27,7 @@ const NavBar = () => {
              <button className ="header__button">Accesorios</button></Link >
             <CartWidget/>
             </div>
-            
+          
         </nav>
         </header>
     )

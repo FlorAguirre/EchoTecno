@@ -14,12 +14,12 @@ const ItemDetailContainer = () => {
         })
     },[])
 
-    console.log(producto)
+   /*  console.log(producto) */
 
     return (
         <>
             <h1> Detalle del Producto</h1>
-            <ItemDetail {...producto} />
+            <ItemDetail {...producto}/>
         </>
     )
 }
