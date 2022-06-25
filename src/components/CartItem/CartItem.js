@@ -8,7 +8,7 @@ export const CartItemMsg = () => {
     return (
         <div>
             <p>No hay productos agregados aun. </p>
-            <Link to="/" >Podes ir acá para empezar tu compra.</Link>
+            <Link to="/" >Hace click aquí para acceder a los productos.</Link>
         </div>
     )
 }
