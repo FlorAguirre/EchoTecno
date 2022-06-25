@@ -6,52 +6,49 @@ import { Link } from "react-router-dom";
 
 export const CartItemMsg = () => {
     return (
-        <div>
-            <p>No hay productos agregados aun. </p>
+        <div className='texto'>
+            <h1>No hay productos agregados aun. </h1>
             <Link to="/" >Hace click aquí para acceder a los productos.</Link>
         </div>
     )
 }
 
 
-
-
-const CartItem = () => {
+const CartItem = ({ id, name, quantity, price,img }) => {
 
     const { cart, getTotalPrice, removeItem, clearCart  } = useContext(CartContext)
-   const cartItem = cart[0]
-   console.log(cartItem.id);
+    const handleRemove = (id) => {
+        removeItem(id)
+    }
     return (
-            <div className="CartItem__div">
-                <div  >
-                    <table className="table">
-                        <thead>
-                            <tr className="CartItem__categorias">
-                                <th scope="col">#</th>
-                                <th scope="col">Productos</th>
-                                <th scope="col">Cantidad</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">Eliminar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className="CartItem__categorias">
-                                <th scope="row">1</th>
-                                <td>{cartItem.name}</td>
-                                <td>{cartItem.quantity}</td>
-                                <td>{cartItem.price}</td>
-                                <td>{getTotalPrice()}</td>
-                                <td><button onClick={() => removeItem (cartItem.id)} >Eliminar item</button></td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <button onClick={() => clearCart ()}>VACIAR CARRITO</button>
-                </div>
+        <article className='CartItem__article'>
+        <header className="HeaderCartItem">
+            <h2 className="ItemHeaderCartItem">
+              
+                {name}
+            </h2>
+        </header>
+        <section className='ContainerItemCartItem'>
+            <p className="InfoCartItem">
+                Cantidad: {quantity}
+            </p>
+            <p className="InfoCartItem">
+                Precio : ${price}
+            </p>
+        </section>           
+        <footer className='ItemFooterCartItem'>
+             <p className="InfoCartItem">
+                 Subtotal: ${price * quantity}
+             </p>
+             <button className='ButtonCartItem' onClick={() => handleRemove(id)}>X</button>
+        </footer>    
+        
+        
+    </article>
+                
+              
           
-            </div>
+            
     )
 
 }

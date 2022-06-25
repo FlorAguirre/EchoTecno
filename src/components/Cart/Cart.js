@@ -12,7 +12,8 @@ const Cart = () => {
         <>
             {totalQuantity === 0
                 ? <CartItemMsg />
-                : cart.map(cart=><CartItem key= {cart.id} {...cart}/>)
+                : cart.map(cart=>
+                <CartItem key= {cart.id}{...cart}/>)
             }
         </>
     )

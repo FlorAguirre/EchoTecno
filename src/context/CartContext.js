@@ -3,7 +3,7 @@ import { useState, createContext, Profiler, useContext, useEffect} from "react"
 
 const CartContext = createContext()
 
-export const CartProvider = ({ children }) => {
+export const CartProvider = ({ children  }) => {
     const [totalQuantity, setTotalQuantity] = useState(0)
     const [cart, setCart] = useState ([])
 
