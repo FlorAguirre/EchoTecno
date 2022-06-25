@@ -1,12 +1,20 @@
-import { useState, createContext, Profiler} from "react"
+import { useState, createContext, Profiler, useContext, useEffect} from "react"
+
 
 const CartContext = createContext()
 
 export const CartProvider = ({ children }) => {
-
+    const [totalQuantity, setTotalQuantity] = useState(0)
     const [cart, setCart] = useState ([])
-   
-     console.log(cart) 
+
+
+    useEffect(() => {
+        let totalQuantity = 0
+        cart.forEach(prod => {
+            totalQuantity += prod.quantity
+        })
+        setTotalQuantity(totalQuantity)
+    }, [cart])
 
     const addItem = (productToAdd) => {
         if(!isInCart(productToAdd.id)) {
@@ -18,6 +26,7 @@ export const CartProvider = ({ children }) => {
         const cartWithoutProduct = cart.filter(prod => prod.id !== id)
 
         setCart(cartWithoutProduct)
+       
     }
 
     const isInCart = (id) => {
@@ -25,20 +34,34 @@ export const CartProvider = ({ children }) => {
 
     }
 
-    const getCartQuantity = () => {
+    const clearCart = () => {
+        setCart ([])
+    }
+
+/*     const getCartQuantity = () => {
         let totalQuantity = 0
         cart.forEach(prod => {
             totalQuantity += prod.quantity
         })
 
         return totalQuantity
+    } */
+
+    
+    const getTotalPrice = () => {
+        let totalPrice = (cart[0].price * cart[0].quantity)
+        return totalPrice
     }
 
     return (
-        <CartContext.Provider value={{cart, addItem, removeItem, isInCart, getCartQuantity}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, isInCart, totalQuantity, clearCart, getTotalPrice}}>
             { children }
         </CartContext.Provider>
     )
 }
 
 export default CartContext
+
+/* export const useCart = () => {
+    return useContext(CartContext)
+} */

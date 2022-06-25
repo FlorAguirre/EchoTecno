@@ -3,6 +3,9 @@ import { useEffect, useState } from "react"
 import {getProductos, getProductosByCategory} from '../../asyncmock'
 import { useParams } from "react-router-dom"
 
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import {db} from '../../services/firebase'
+
 
 const ItemListContainer = (props) => {
 
@@ -16,9 +19,23 @@ const ItemListContainer = (props) => {
     useEffect(() => {
 
         setLoading(true)
-    
 
-        if(!categoryId){
+        const collectionRef = categoryId ? (
+            query(collection(db, 'productos'), where('category', '==', categoryId))
+        ) : (collection(db, 'productos'))
+    
+        getDocs(collectionRef).then(response => {
+            console.log(response)
+            const productosFormatted =  response.docs.map(doc => {
+                return {id: doc.id, ...doc.data() }
+            })
+            setProductos(productosFormatted)
+        }).catch(error => {
+            console.log(error)
+        }).finally(() => {
+            setLoading(false)
+        })
+  /*       if(!categoryId){
              getProductos().then(prods => {
             setProductos(prods)
         }).catch(error => {
@@ -34,7 +51,7 @@ const ItemListContainer = (props) => {
             }).finally(() => {
                 setLoading(false)
             })
-        }
+        } */
     
     }, [categoryId])
 
@@ -52,6 +69,7 @@ const ItemListContainer = (props) => {
     }) */
 
     return (
+       
         <div>
         <h1>{props.greeting}</h1>
         {productos.length > 0
@@ -59,6 +77,7 @@ const ItemListContainer = (props) => {
             :<h1>No hay productos</h1>}
         
         </div>
+       
     )
 }
 
