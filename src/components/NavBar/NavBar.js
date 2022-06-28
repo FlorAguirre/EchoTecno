@@ -3,7 +3,7 @@ import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
 import { Link, NavLink } from 'react-router-dom'
 import { useEffect } from 'react'
-
+import Login from '../../components/Login/Login';
 
 const NavBar = () => {
 
@@ -26,6 +26,7 @@ const NavBar = () => {
             <Link to='/category/Accesorios'>
              <button className ="header__button">Accesorios</button></Link >
             <CartWidget/>
+            <Login/>
             </div>
           
         </nav>

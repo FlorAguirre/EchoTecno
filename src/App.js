@@ -12,11 +12,14 @@ import React, {
 import {CartProvider} from './context/CartContext'
 import { NotificationProvider } from './notification/Notification';
 import Cart from './components/Cart/Cart';
+import CheckOut from './components/CheckOut/CheckOut';
 
 
 
 
 function App() {
+
+  
 
   return (
     <div className="App">
@@ -30,6 +33,7 @@ function App() {
                   <Route path='/category/:categoryId' element={<ItemListContainer greeting ='EchoTecno'/>}/>
                   <Route path='/detail/:productoId' element ={<ItemDetailContainer />}/>
                   <Route path="/cart" element={<Cart />} />
+                  <Route path="/checkout" element={<CheckOut />} /> 
                 </Routes>
             </section>
           </BrowserRouter>

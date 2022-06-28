@@ -1,17 +1,8 @@
 import { useContext } from "react"
 import CartContext from "../../context/CartContext";
 import "./CartItem.css"
-
 import { Link } from "react-router-dom";
 
-export const CartItemMsg = () => {
-    return (
-        <div className='texto'>
-            <h1>No hay productos agregados aun. </h1>
-            <Link to="/" >Hace click aquí para acceder a los productos.</Link>
-        </div>
-    )
-}
 
 
 const CartItem = ({ id, name, quantity, price,img }) => {
@@ -20,8 +11,10 @@ const CartItem = ({ id, name, quantity, price,img }) => {
     const handleRemove = (id) => {
         removeItem(id)
     }
-    return (
+    return ( 
+    <>
         <article className='CartItem__article'>
+           
         <header className="HeaderCartItem">
             <h2 className="ItemHeaderCartItem">
               
@@ -42,11 +35,9 @@ const CartItem = ({ id, name, quantity, price,img }) => {
              </p>
              <button className='ButtonCartItem' onClick={() => handleRemove(id)}>X</button>
         </footer>    
-        
-        
     </article>
-                
-              
+     
+    </> 
           
             
     )
