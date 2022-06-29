@@ -21,7 +21,7 @@ const productos = [{
         name: 'Teclado Gamer',
         price: 15000,
         category: 'Accesorios',
-        img: '/imagenes/71Xk+hR7oTL._AC_SX679_.jpg',
+        img: '/imagenes/71Xk+hR7oTL._AC_SX679_-removebg-preview.jpg',
         stock: 15,
         description: 'Snpurdiri ST-K3 60% Wired Gaming Keyboard, RGB Backlit Ultra-Compact Mini Keyboard, Waterproof Mini Compact 61 Keys Keyboard for PC/Mac Gamer, Typist, Travel, Easy to Carry on Business Trip(Black)'
     },

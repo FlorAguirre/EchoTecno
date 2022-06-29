@@ -13,13 +13,27 @@ import {CartProvider} from './context/CartContext'
 import { NotificationProvider } from './notification/Notification';
 import Cart from './components/Cart/Cart';
 import CheckOut from './components/CheckOut/CheckOut';
+import Login from './components/Login/Login';
+
+import app from './services/firebase/index'
+import {getAuth, onAuthStateChanged} from 'firebase/auth'
 
 
-
+const auth = getAuth(app)
 
 function App() {
 
-  
+  const [usuario, setUsuario] = useState(null)
+
+  onAuthStateChanged(auth, (usuarioFirebase) => {
+    if(usuarioFirebase){
+        setUsuario(usuarioFirebase)
+    }
+    else{
+        setUsuario(null)
+    }
+    
+  })
 
   return (
     <div className="App">
@@ -34,7 +48,8 @@ function App() {
                   <Route path='/detail/:productoId' element ={<ItemDetailContainer />}/>
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/checkout" element={<CheckOut />} /> 
-                </Routes>
+                  <Route path="/login" element={<Login/>} /> 
+                  </Routes>
             </section>
           </BrowserRouter>
       </CartProvider>

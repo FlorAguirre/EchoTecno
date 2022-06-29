@@ -4,7 +4,9 @@ import { getProductosById } from "../../asyncmock"
 import {useNotification} from '../../notification/Notification'
 import { useContext, useState } from "react"
 import CartContext from "../../context/CartContext"
-
+/* import Form from '../Form/Form' */
+import app from '../../services/firebase/index'
+import{getAuth, signOut} from 'firebase/auth'
 
 const CheckOut = () =>{
     const[loading, setLoading] = useState(false)
@@ -14,25 +16,44 @@ const CheckOut = () =>{
 
     const setNotification = useNotification()
   
+    const auth = getAuth(app)
 
+    const valorInicial = {
+        name: '',
+        email:'',
+        phone:'',
+        address: ''
+    }
+
+ const [user, setUser] = useState(valorInicial)
+
+ const capturarInputs = (e) => {
+   const {name, value} = e.target;
+   setUser({...user,[name]: value})
+
+ }
+
+ const guardarDatos = async(e) => {
+    e.preventDefault();
+    console.log(user);
+    setUser({...valorInicial})
+
+ }
 
    const handleCreateOrder = () => {
 
-  
+    
     /*  console.log('crear orden') */
      setLoading(true)
 
 
      const objOrder = {
-         buyer:{
-             name: '',
-             email:'',
-             phone:'',
-             address: ''
-         },
+          buyer: user,
          items: cart,
          total: total,
      }
+
+     
 
      const batch = writeBatch(db)
 
@@ -87,10 +108,29 @@ const CheckOut = () =>{
 
  return (
     <>
-        <form>
-        
-        </form>
-    <button onClick={handleCreateOrder}>Generar Orden</button>
+        <h3>Completa los datos</h3>
+                <form onSubmit={guardarDatos}>
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name='name' placeholder='Ingrese su nombre' onChange={capturarInputs} value={user.name}/>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="text" name='email' placeholder='Ingrese su Email' onChange={capturarInputs} value={user.email}/>
+                    </div>
+                    <div>
+                        <label>Phone</label>
+                        <input type="text" name='phone' placeholder='Ingrese su telefono' onChange={capturarInputs} value={user.phone}/>
+                    </div>
+                    <div>
+                        <label>Address</label>
+                        <input type="text" name='address' placeholder='Ingrese su dirección' onChange={capturarInputs} value={user.address}/>
+                    </div>
+
+                     <button  onClick={handleCreateOrder} >Generar Orden</button>
+                </form>
+      
+ 
     </>
  )
 }
