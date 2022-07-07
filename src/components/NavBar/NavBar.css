@@ -40,12 +40,12 @@ body{
   }
 
   .carrito{
-    height: 35px;
-    margin-top:25px;
+    height: 50px ;
+    margin-top:25px ;
     margin-left: 40px;
     border: solid;
-    padding:10px;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    padding:10px ;
+    background-color:rgb(246, 193, 193);
     border-radius:1rem;
   }
 

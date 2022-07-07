@@ -7,6 +7,8 @@ import CartContext from "../../context/CartContext"
 /* import Form from '../Form/Form' */
 import app from '../../services/firebase/index'
 import{getAuth, signOut} from 'firebase/auth'
+import '../CheckOut/CheckOut.css'
+
 
 const CheckOut = () =>{
     const[loading, setLoading] = useState(false)
@@ -108,26 +110,28 @@ const CheckOut = () =>{
 
  return (
     <>
-        <h3>Completa los datos</h3>
-                <form onSubmit={guardarDatos}>
+        <h1>Completa los datos</h1>
+                <form  onSubmit={guardarDatos}>
+                <div className ='form'>
                     <div>
-                        <label>Name</label>
+                        <label className='label'>Nombre</label>
                         <input type="text" name='name' placeholder='Ingrese su nombre' onChange={capturarInputs} value={user.name}/>
                     </div>
                     <div>
-                        <label>Email</label>
+                        <label className='label'>Email</label>
                         <input type="text" name='email' placeholder='Ingrese su Email' onChange={capturarInputs} value={user.email}/>
                     </div>
                     <div>
-                        <label>Phone</label>
+                        <label className='label'>Teléfono</label>
                         <input type="text" name='phone' placeholder='Ingrese su telefono' onChange={capturarInputs} value={user.phone}/>
                     </div>
                     <div>
-                        <label>Address</label>
+                        <label className='label'>Dirección</label>
                         <input type="text" name='address' placeholder='Ingrese su dirección' onChange={capturarInputs} value={user.address}/>
                     </div>
 
                      <button  onClick={handleCreateOrder} >Generar Orden</button>
+                     </div>
                 </form>
       
  
