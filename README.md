@@ -11,6 +11,7 @@ Descripción: Venta de productos tecnológicos.
 ## Descripcion del proyecto EchoTecno:
 
 Venta de productos tecnológicos. El gif/video (VideoDemo) mostrando la funcionalidad se encuentra en el proyecto.
+A su vez, agregue un video aparte del Login. (VideoLogin)
 
 
 1.  Pagina Principal:
