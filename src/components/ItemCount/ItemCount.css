@@ -1,0 +1,60 @@
+
+    @media (min-width:1600px){
+.boton__cantidad{
+    margin-top: 20px;
+    color:black;
+    border-radius: 2rem;
+    padding:10px;
+    background-color: rgb(139, 242, 220);   
+    font-weight: bold; 
+    font-size: 1.1rem;
+    
+    
+}
+
+.contador{
+    display:flex;
+    flex-direction: row;
+    margin-left: 900px;
+    
+}
+
+.numero{
+    margin-top:20px;
+    padding: 10px;
+}
+
+.agregar{
+    margin-left:10px;
+
+}
+}
+
+.boton__cantidad{
+    margin-top: 20px;
+    color:black;
+    border-radius: 2rem;
+    padding:10px;
+    background-color: rgb(139, 242, 220);   
+    font-weight: bold; 
+    font-size: 1.1rem;
+    
+    
+}
+
+.contador{
+    display:flex;
+    flex-direction: row;
+    margin-left: 650px;
+    
+}
+
+.numero{
+    margin-top:20px;
+    padding: 10px;
+}
+
+.agregar{
+    margin-left:10px;
+
+}

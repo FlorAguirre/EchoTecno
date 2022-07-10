@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom"
 
 import { getDocs, collection, query, where } from 'firebase/firestore'
 import {db} from '../../services/firebase'
+import "./ItemListContainer.css"
 
 
 const ItemListContainer = (props) => {
@@ -74,7 +75,9 @@ const ItemListContainer = (props) => {
         <h1>{props.greeting}</h1>
         {productos.length > 0
             ? <ItemList productos = { productos} /> 
-            :<h1>No hay productos</h1>}
+            :
+                <h1 className='noHayProductos'>No hay productos</h1>
+                }
         
         </div>
        

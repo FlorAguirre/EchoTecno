@@ -1,5 +1,11 @@
 .imagen__producto {
-  height: 150px;
+  height: 100px;
+}
+
+@media (min-width:1700px){
+  .imagen__producto{
+    height: 150px;
+  }
 }
 
 .contenedor {
@@ -10,14 +16,17 @@
   /* align-items: center; */
   /* align-content: center; */
   width: 100%;
+  margin-top:40px;
+
  
 }
 
 .productos {
-  padding: 20px;
+  padding: 30px;
   border: 2px solid black;
   margin-top: 20px;
-  width: 500px;
+  width: 450px;
+  margin-right:30px;
   background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   color: white;
 
@@ -31,4 +40,13 @@
   font-weight: bold;
   width: 150px;
   border-radius: 2rem;
+}
+
+.nombre__item{
+  font-size:1.8rem;
+  margin-top:20px;
+}
+
+.precio__item{
+  font-size: 1.7rem;
 }

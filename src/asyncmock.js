@@ -25,34 +25,7 @@ const productos = [{
         stock: 15,
         description: 'Snpurdiri ST-K3 60% Wired Gaming Keyboard, RGB Backlit Ultra-Compact Mini Keyboard, Waterproof Mini Compact 61 Keys Keyboard for PC/Mac Gamer, Typist, Travel, Easy to Carry on Business Trip(Black)'
     },
-    {
-        id: '4',
-        name: 'Tablet Google',
-        price: 14000,
-        category: 'Tablet',
-        img: '/imagenes/icysl39azuqnz4yrv7wc9zopwx8a45492484.webp',
-        stock: 30,
-        description: 'Marca Google, Pantalla de 14", Windows 11'
-    },
-    {
-        id: '5',
-        name: 'Audifonos Beats',
-        price: 20000,
-        category: 'Audifonos',
-        img: '/imagenes/Audifonos-removebg-preview.png',
-        stock: 20,
-        description: 'Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones - Apple W1 Headphone Chip, Class 1 Bluetooth, 22 Hours of Listening Time, Built-in Microphone - Defiant Black-Red (Latest Model)'
-    },
-    {
-        id: '6',
-        name: 'Teclado Gamer',
-        price: 15000,
-        category: 'Accesorios',
-        img: '/imagenes/Teclado Gamer.png',
-        stock: 15,
-        description: 'Snpurdiri ST-K3 60% Wired Gaming Keyboard, RGB Backlit Ultra-Compact Mini Keyboard, Waterproof Mini Compact 61 Keys Keyboard for PC/Mac Gamer, Typist, Travel, Easy to Carry on Business Trip(Black)'
-    },
-
+   
 ]
 
 export const getProductos = () => {

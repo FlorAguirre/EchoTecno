@@ -39,7 +39,7 @@ const Cart = () => {
 
     return (
         <>
-        <h1>Cart</h1>
+        <h1>Carrito</h1>
             {cart.map(cart=>
                 <CartItem key= {cart.id}{...cart}/>)}
             

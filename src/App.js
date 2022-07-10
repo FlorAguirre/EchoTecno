@@ -1,7 +1,7 @@
 
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-/* import Footer from './components/Footer/Footer'; */
+import Footer from './components/Footer/Footer'; 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter , Routes, Route } from 'react-router-dom'
@@ -41,25 +41,26 @@ function App() {
     <CartProvider>
         <BrowserRouter >
         <NavBar />
-            <section>
+          
                 <Routes>
-                  <Route path='/' element={<ItemListContainer greeting ='EchoTecno'/>}/>
-                  <Route path='/category/:categoryId' element={<ItemListContainer greeting ='EchoTecno'/>}/>
+                  <Route path='/' element={<ItemListContainer greeting ='Nuestros Productos'/>}/>
+                  <Route path='/category/:categoryId' element={<ItemListContainer greeting =''/>}/>
                   <Route path='/detail/:productoId' element ={<ItemDetailContainer />}/>
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/checkout" element={<CheckOut />} /> 
                   <Route path="/login" element={<Login/>} /> 
                   </Routes>
-            </section>
+           
+            <Footer/>
           </BrowserRouter>
       </CartProvider>
-      
-          {/*   <footer>
-              <Footer/>
-            </footer> */}
+       
+           
+             
+            
             
   </NotificationProvider>
-   
+  
     </div>
 
    
