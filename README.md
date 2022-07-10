@@ -1,15 +1,33 @@
-Descripcion del proyecto EchoTecno:
-
-El e-commerce es sobre venta de productos tecnologicos.
-
-En la pagina principal figuran los productos que se venden, y en el navegador las diferentes categorías.
-
-Si se quiere saber mas del producto en cuestion, se deberá hacer click en "Ver Detalle".
-
-A su vez, en las categorias que figuran en el navegador es un filtro, si se selecciona una de esas categorías solo aparecerán los productos de las mismas.
+# EchoTecno
+Repositorio Proyecto Final
+Propietario : Florencia Aguirre
+Sitio Web: EchoTecno
+Descripción: Venta de productos tecnológicos.
 
 
-Funcionalidad:
+# Proyecto Final – ReactJS
+
+
+## Descripcion del proyecto EchoTecno:
+
+Venta de productos tecnológicos. El gif/video (VideoDemo) mostrando la funcionalidad se encuentra en el proyecto.
+
+
+1.  Pagina Principal:
+Figuran todos los productos que estan a la venta
+
+2.  Detalle de producto:
+Figura el detalle del producto que se selecciono y la cantidad que se desea comprar.
+Las imagenes tiene incorporado un carrousel.
+
+3.  Carrito de compra:
+Figuran los productos seleccionados que se desean comprar
+
+4.  Formulario de compra:
+Una vez que se hizo click en procesar compra, se deberá completar un formulario con los datos para que se pueda generar la orden.
+
+
+## Funcionalidad:
 - Se puede simular una compra de productos.
 - Se deberá ingresar a la pagina web, se selecciona el producto ( haciendo click en Ver detalle)
 - Una vez que se accede al detalle de producto,se elije la cantidad y se procede a hacer click en el boton "Agregar al Carrito"
