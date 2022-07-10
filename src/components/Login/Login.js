@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import "./Login.css"
 import app from '../../services/firebase/index'
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth'
 
@@ -25,30 +25,31 @@ const Login =() => {
 
     return (
         <>
-        <h1>{registro ? 'registrate': 'inicia sesion'}</h1>
-            <form onSubmit={handleSubmit}>
+        <h1>{registro ? 'Registrate': 'Inicia sesion'}</h1>
+            <form className="form__registro" onSubmit={handleSubmit}>
                 <div>
-                <label>E-mail:</label>
-               <input type='email' placeholder='Ingrese el mail' id="email" required/>
+                <label className="padding">E-mail:</label>
+               <input  type='email' placeholder='Ingrese el mail' id="email" required/>
                </div>
                <div>
-               <label>Contraseña:</label>
+               <label className="padding">Contraseña:</label>
                <input type='password' placeholder='Ingrese su contraseña' id="contraseña" required/>
             </div>
 
             <div>
-               <button type='submit'>
-                {registro ? 'registrate' : 'inicia sesion' }
+               <button className="boton__cantidad" type='submit'>
+                {registro ? 'Registrate' : 'Inicia sesion' }
                </button>
                </div>
-            </form>
-
-            <div>
-                <button onClick={() =>  
+                <div>
+                <button className="boton__cantidad" onClick={() =>  
                     setRegistro(!registro)}>
                     {registro ? 'ya tienes una cuenta? Inicia sesion' : 'No tienes cuenta? Registrate'}
                 </button>
             </div>
+            </form>
+
+           
         </>
     )
 }
