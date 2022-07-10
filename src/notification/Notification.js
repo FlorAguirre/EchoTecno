@@ -8,10 +8,11 @@ const Notification = ({mensaje, severity}) => {
         right:5,
         width:'auto',
         height:'auto',
-        backgroundColor: severity === 'error'? 'red': 'green',
-        color:'white',
+        backgroundColor: severity === 'error'? 'red': 'rgb(238, 196, 255)',
+        color:'black',
         padding:'10px 20px 10px 20px',
         borderRadius:'10px',
+        fontWeight: 'bold',
     }
 
 
@@ -45,7 +46,7 @@ export const NotificationProvider = ({children}) => {
 
     return (
         <NotificationContext.Provider value= {setNotification}>
-    {/*        { msgConfig.mensaje !== '' && <Notification mensaje={msgConfig.mensaje} severity={msgConfig.severity}/>} */}
+ 
     <Notification mensaje={msgConfig.mensaje} severity={msgConfig.severity}/>
             {children}
         </NotificationContext.Provider>

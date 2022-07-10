@@ -1,6 +1,6 @@
 import './Footer.css'
 import logo1 from '../../assets/img/Echotecno-removebg-preview.png'
-import { Link } from 'react-router-dom'
+
 
 const Footer = () => {
 

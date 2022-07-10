@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './ItemDetail.css'
 import { useContext } from 'react'
-import CartWidget from '../CartWidget/CartWidget'
 import CartContext from '../../context/CartContext'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
@@ -20,13 +19,6 @@ const ItemDetail = ({id, name , description,price, img, stock,img2,img3}) => {
         addItem({ id, name, price, quantity})
         setQuantityAdded(quantity)
     }
-/* 
-    const {cart, setCart} = useContext(Context)
-
-    const handleOnAdd = (quantity) => {
-        console.log(`Se agregaron ${quantity} ${name}`)
-        setCart([...cart, {id, name, price, quantity}])
-    } */
 
 
     return (
@@ -70,8 +62,8 @@ const ItemDetail = ({id, name , description,price, img, stock,img2,img3}) => {
                 :  <Link to='/cart'><button className='terminarCompra'>Terminar compra</button></Link>
             }
         </footer>
-{/* 
-  {   <Count onAdd={handleOnAdd} stock={stock}/> } */}
+
+ 
 
  </div>
           

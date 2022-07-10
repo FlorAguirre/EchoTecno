@@ -10,6 +10,9 @@
 display:grid;
 grid-template-columns: 1fr 1fr 1fr;
 margin-top: 60px;
+box-shadow: 5px 5px 20px black;
+border-radius: 1rem;
+padding:10px;
 }
 
 .terminarCompra{ 
@@ -66,3 +69,5 @@ margin-top: 60px;
     margin-top: 90px;
     }
 }
+
+

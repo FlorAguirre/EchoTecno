@@ -50,23 +50,13 @@ function App() {
                   <Route path="/checkout" element={<CheckOut />} /> 
                   <Route path="/login" element={<Login/>} /> 
                   </Routes>
-           
             <Footer/>
           </BrowserRouter>
       </CartProvider>
-       
-           
-             
-            
-            
+
   </NotificationProvider>
-  
+
     </div>
-
-   
-
-    
-    
     
   );  
 }

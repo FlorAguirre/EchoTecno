@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { getProductosById } from "../../asyncmock"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 
@@ -26,15 +25,13 @@ const ItemDetailContainer = () => {
         }).finally(() => {
             setLoading(false)
         })
-     /*    getProductosById(params.productoId).then(response => {
-            setProducto(response)
-        }) */
+
     },[productoId])
 
     if(loading) {
         return <h1>Cargando...</h1>
     }
-   /*  console.log(producto) */
+
 
     return (
         <>

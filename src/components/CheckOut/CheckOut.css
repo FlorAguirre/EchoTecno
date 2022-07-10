@@ -6,6 +6,8 @@
     margin-left: 500px;;
     margin-right: 500px;
     background-color: rgb(238, 196, 255);
+    box-shadow: 5px 5px 20px black;
+    border-radius: 1rem;
 }
 
 .label{
@@ -24,4 +26,10 @@
     font-size: 1.1rem;
     
     
+}
+
+.input{
+    margin:10px;
+    border-radius: 0.9rem;
+    padding:5px;
 }

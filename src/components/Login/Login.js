@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { Link } from "react-router-dom";
 
 import app from '../../services/firebase/index'
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth'
-import { async } from '@firebase/util';
+
 
 const auth = getAuth(app)
 

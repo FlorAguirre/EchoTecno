@@ -1,7 +1,6 @@
 import carrito from '../../assets/img/2561279_cart_shopping_icon.png'
 import { useContext } from 'react'
 import CartContext from '../../context/CartContext'
-import { useCart } from '../../context/CartContext';
 import { Link } from "react-router-dom"
 
 const CartWidget = () => {

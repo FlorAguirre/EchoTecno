@@ -1,0 +1,11 @@
+.boton__cantidad{
+    margin-top: 20px;
+    color:black;
+    border-radius: 2rem;
+    padding:10px;
+    background-color: rgb(139, 242, 220);   
+    font-weight: bold; 
+    font-size: 1.1rem;
+    
+    
+}

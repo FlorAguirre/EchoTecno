@@ -1,6 +1,5 @@
 import { useState, createContext, Profiler, useContext, useEffect} from "react"
 
-
 const CartContext = createContext()
 
 export const CartProvider = ({ children  }) => {
@@ -48,14 +47,7 @@ export const CartProvider = ({ children  }) => {
         setCart ([])
     }
 
-/*     const getCartQuantity = () => {
-        let totalQuantity = 0
-        cart.forEach(prod => {
-            totalQuantity += prod.quantity
-        })
 
-        return totalQuantity
-    } */
 
     const getTotal = () =>{
         let total = 0
@@ -64,10 +56,6 @@ export const CartProvider = ({ children  }) => {
         })
         return total
     }
-  /*   const getTotalPrice = () => {
-        let totalPrice = (cart[0].price * cart[0].quantity)
-        return totalPrice
-    } */
 
     return (
         <CartContext.Provider value={{cart, addItem, removeItem, isInCart, getQuantity, totalQuantity, clearCart, getTotal}}>

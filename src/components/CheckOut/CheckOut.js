@@ -1,10 +1,8 @@
 import {addDoc, collection, updateDoc, doc, writeBatch, getDocs, query , where, documentId} from 'firebase/firestore'
 import {db} from '../../services/firebase/index'
-import { getProductosById } from "../../asyncmock"
 import {useNotification} from '../../notification/Notification'
 import { useContext, useState } from "react"
 import CartContext from "../../context/CartContext"
-/* import Form from '../Form/Form' */
 import app from '../../services/firebase/index'
 import{getAuth, signOut} from 'firebase/auth'
 import '../CheckOut/CheckOut.css'
@@ -45,7 +43,7 @@ const CheckOut = () =>{
    const handleCreateOrder = () => {
 
     
-    /*  console.log('crear orden') */
+   
      setLoading(true)
 
 
@@ -101,11 +99,7 @@ const CheckOut = () =>{
              setLoading(false)
          })
 
-    /*  const collectionRef = collection (db, 'orders')
-
-     addDoc(collectionRef, objOrder).then(({id}) =>{
-         console.log(id) 
-     }) */
+  
  }
 
  return (
@@ -115,19 +109,19 @@ const CheckOut = () =>{
                 <div className ='form'>
                     <div>
                         <label className='label'>Nombre</label>
-                        <input type="text" name='name' placeholder='Ingrese su nombre' onChange={capturarInputs} value={user.name}/>
+                        <input className="input"type="text" name='name' placeholder='Ingrese su nombre' onChange={capturarInputs} value={user.name}/>
                     </div>
                     <div>
                         <label className='label'>Email</label>
-                        <input type="text" name='email' placeholder='Ingrese su Email' onChange={capturarInputs} value={user.email}/>
+                        <input className="input" type="text" name='email' placeholder='Ingrese su Email' onChange={capturarInputs} value={user.email} />
                     </div>
                     <div>
                         <label className='label'>Teléfono</label>
-                        <input type="text" name='phone' placeholder='Ingrese su telefono' onChange={capturarInputs} value={user.phone}/>
+                        <input className="input" type="text" name='phone' placeholder='Ingrese su telefono' onChange={capturarInputs} value={user.phone}/>
                     </div>
                     <div>
                         <label className='label'>Dirección</label>
-                        <input type="text" name='address' placeholder='Ingrese su dirección' onChange={capturarInputs} value={user.address}/>
+                        <input className="input" type="text" name='address' placeholder='Ingrese su dirección' onChange={capturarInputs} value={user.address}/>
                     </div>
 
                      <button  className="boton__cantidad"onClick={handleCreateOrder} >Generar Orden</button>
