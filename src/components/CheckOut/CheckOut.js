@@ -130,7 +130,7 @@ const CheckOut = () =>{
                         <input type="text" name='address' placeholder='Ingrese su dirección' onChange={capturarInputs} value={user.address}/>
                     </div>
 
-                     <button  onClick={handleCreateOrder} >Generar Orden</button>
+                     <button  className="boton__cantidad"onClick={handleCreateOrder} >Generar Orden</button>
                      </div>
                 </form>
       

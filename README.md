@@ -1,3 +1,48 @@
+Descripcion del proyecto EchoTecno:
+
+El e-commerce es sobre venta de productos tecnologicos.
+
+En la pagina principal figuran los productos que se venden, y en el navegador las diferentes categorías.
+
+Si se quiere saber mas del producto en cuestion, se deberá hacer click en "Ver Detalle".
+
+A su vez, en las categorias que figuran en el navegador es un filtro, si se selecciona una de esas categorías solo aparecerán los productos de las mismas.
+
+
+Funcionalidad:
+- Se puede simular una compra de productos.
+- Se deberá ingresar a la pagina web, se selecciona el producto ( haciendo click en Ver detalle)
+- Una vez que se accede al detalle de producto,se elije la cantidad y se procede a hacer click en el boton "Agregar al Carrito"
+- Aparecerá un boton "Terminar Compra", el cual llevará a la solapa del Carrito donde se podra ver el Producto seleccionado, la cantidad, el precio y el precio total.
+- Al final del carrito, se podrán ver dos botones " Limpiar Carrito"( el cual limpia todo el contenido del carrito de compra) y " Proceder Compra" (el cual lleva al formulario de compra)
+- Una vez en el formulario de compra,se deberá completar los datos solicitados y hacer click en "Generar Orden". Aparecerá un mensaje con el ID de la orden, y los datos se guardarán en la base de datos de FIREBASE.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -70,13 +115,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-Descripcion del proyecto EchoTecno:
 
-El e-commerce es sobre venta de productos tecnologicos.
-
-En la pagina principal figuran los productos que se venden, y en el navegador las diferentes categorías.
-
-Si se quiere saber mas del producto en cuestion, se deberá hacer click en "Ver Detalle".
-
-A su vez, en las categorias que figuran en el navegador es un filtro, si se selecciona una de esas categorías solo aparecerán los productos de las mismas.
 
